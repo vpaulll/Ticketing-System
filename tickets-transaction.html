@@ -3,198 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- CUSTOM STYLESHEET -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <title></title>
-    
+    <title>Bootstrap 5</title>
+    <style>
+    </style>
     
 </head>
 <body>
-    <div class = "container-fluid my-3 px-5" >
-        <div class="display-3 fw-bold
-                    text-decoration-underline
-                    mb-3">Ticketing System</div>
-       
+  
+      <div class="container-fluid py-5 bg-light">
+        <div class="display-3 mb-4 py-3 text-decoration-underline">Request Tickets</div>
+        
+        <!-- STATUS CARDS -->
         <div class="row g-3">
-            <!-- COMPLETED CARD -->
-            <div class=" col-lg-3 col-6 mb-3">
-                <div class="card card-text bg-success text-light text-center">
-                    <div class="card-header text-center fs-4">
-                        Completed
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <i class="bi bi-bookmark-check-fill fs-1"></i>
-                            <span class="fs-3">3</span>
-                        </div>
-                    </div>
-                </div>   
+          <!-- COMPLETE CARD -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card bg-success text-light text-center">
+              <div class="card-header fs-4">completed</div>
+              <div class="d-flex align-items-center justify-content-around py-1">
+                <i class="bi bi-check-square fs-1 text-light"></i>
+                <h2 class="fw-bold fs-1">3</h2>
+              </div>
             </div>
+          </div>
 
-            <div class=" col-lg-3 col-6 mb-3">
-                <div class="card card-text bg-warning">
-                    <div class="card-header text-center fs-4">
-                        On Process
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <i class="bi bi-clipboard-heart-fill fs-1"></i>
-                            <span class="fs-3">3</span>
-                        </div>
-                        
-                    </div>
-                </div>
+          <!-- ON PROCESS CARD -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center text-light bg-warning">
+              <div class="card-header fs-4">On Process</div>
+              <div class="d-flex align-items-center justify-content-around py-1 border border-1 border-warning">
+                <i class="bi bi-pencil-square fs-1 text-light"></i>
+                <h2 class="fw-bold fs-1">5</h2>
+              </div>
+              
             </div>
+          </div>
 
-            <div class=" col-lg-3 col-6 mb-3">
-                <div class="card card-text bg-info">
-                    <div class="card-header text-center fs-4">
-                        On Queue 
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <i class="bi bi-car-front-fill fs-1 bg-info"></i>
-                            <span class="fs-3">3</span>
-                        </div>
-                        
-                    </div>
-                </div>
+          <!-- ON QUEUE CARD -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card bg-secondary text-light text-center">
+              <div class="card-header fs-4">On Queue</div>
+              <div class="d-flex align-items-center justify-content-around py-1">
+                <i class="bi bi-list-task fs-1 text-light"></i>
+                <h2 class="fw-bold fs-1">8</h2>
+              </div>
             </div>
+          </div>
 
-            <div class=" col-lg-3 col-6 mb-3">
-                <div class="card card-text bg-danger">
-                    <div class="card-header text-center fs-4">
-                        Overdue
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <i class="bi bi-envelope-exclamation-fill fs-1"></i>
-                            <span class="fs-3">3</span>
-                        </div>
-                        
-                    </div>
-                </div>
+          <!-- OVERDUE CARD -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card bg-danger text-light text-center">
+              <div class="card-header fs-4">Overdue</div>
+              <div class="d-flex align-items-center justify-content-around py-1">
+                <i class="bi bi-exclamation-diamond fs-1 text-light"></i>
+                <h2 class="fw-bold fs-1">5</h2>
+              </div>
             </div>
+          </div>
 
         </div>
-    </div>
-
-    <div class=" divider"></div>
-
-    <section class="accordion container-fluid" id="accordion-table-ongoing"> 
-       <div class="accordion-item acc-warning"> 
-            <h2 class="accordion-header">
-                <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#acc-table-ongoing" aria-expanded="true" aria-controls="acc-table-ongoing">
-                    <div class="text-primary fw-bold ">On-Going Tickets</div>
-                </button>
-            </h2>
-            <div id="acc-table-ongoing" class="accordion-collapse collapse show" data-bs-parent="#accordion-table-ongoing" style="">
-                <div class="accordion-body">
-                  <!------------------------------- ON GOING TABLES ----------------------------- -->
-                  <table class="table table-striped table-responsive-md table-sm table-hover">
-                    <thead class="table-dark">
-                      <tr>
-                        <th scope="col">Ticket No</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Requested By</th>
-                        <th scope="col">Department</th>
-                        <th scope="col">Date Requested</th>
-                        <th scope="col">Target Date</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th class="align-middle" scope="row">TIX-20231019</th>
-                        <td class="align-middle">Transfer of PC</td>
-                        <td class="align-middle">John Doe</td>
-                        <td class="align-middle">Sales Department</td>
-                        <td class="align-middle">2023-10-19</td>
-                        <td class="align-middle">2023-10-23</td>
-                        <td class="align-middle">Hardware Support</td>
-                        <td class="align-middle"><span class="badge rounded-pill text-bg-warning">ongoing</span></td>
-                        <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
-                      </tr>
-                      <tr>
-                        <th class="align-middle" scope="row">TIX-20231020</th>
-                        <td class="align-middle">Additional Module Access</td>
-                        <td class="align-middle">Rick Shaw</td>
-                        <td class="align-middle">HR Department</td>
-                        <td class="align-middle">2023-10-20</td>
-                        <td class="align-middle">2023-10-27</td>
-                        <td class="align-middle">Access Elevation</td>
-                        <td class="align-middle"><span class="badge rounded-pill text-bg-warning">ongoing</span></td>
-                        <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
-                      </tr>
-                      <tr>
-                        <th class="align-middle" scope="row">TIX-20231022</th>
-                        <td class="align-middle">PC Problem</td>
-                        <td class="align-middle">Erika Weltz</td>
-                        <td class="align-middle">HR Department</td>
-                        <td class="align-middle">2023-10-22</td>
-                        <td class="align-middle">2023-10-26</td>
-                        <td class="align-middle">Hardware Support</td>
-                        <td class="align-middle"><span class="badge rounded-pill text-bg-warning">ongoing</span></td>
-                        <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
-                      </tr>
-                      <tr>
-                        <th class="align-middle" scope="row">TIX-20231004</th>
-                        <td class="align-middle">New Report</td>
-                        <td class="align-middle">Sam Son</td>
-                        <td class="align-middle">Accounting Department</td>
-                        <td class="align-middle">2023-10-04</td>
-                        <td class="align-middle">2023-10-10</td>
-                        <td class="align-middle">Software Module</td>
-                        <td class="align-middle"><span class="badge rounded-pill text-bg-warning me-1">ongoing</span><span class="badge rounded-pill text-bg-danger">overdue</span></td>
-                        <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
-                      </tr>
-                      <tr>
-                        <th class="align-middle" scope="row">TIX-20231010</th>
-                        <td class="align-middle">Bug Detected</td>
-                        <td class="align-middle">Julie Davis</td>
-                        <td class="align-middle">Accounting Department</td>
-                        <td class="align-middle">2023-10-10</td>
-                        <td class="align-middle">2023-10-16</td>
-                        <td class="align-middle">Software Module</td>
-                        <td class="align-middle"><span class="badge rounded-pill text-bg-warning me-1">ongoing</span><span class="badge rounded-pill text-bg-danger">overdue</span></td>
-                        <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <!-- END-Table Proper -->
-    
-                </div>
-              </div>
-            
-       </div>
-    </section>
-    <div class="divider"></div>
-
-    <!-- ONQUEUE TABLE -->
-    <section class="accordion container-fluid" id="accordion-table-onqueue">
-        <div class="accordion-item acc-secondary">
+      </div>
+      
+      <!-- /<div class=" divider"></div> -->
+      <div class="container-fluid px-4 py-2">
+        <div class="row">
+          <button type="button" class="btn btn-primary" id="add-ticket">Add Ticket</button>
+        </div>
+      
+      </div>
+       
+      <!-- ONGOING TABLE -->
+      <section class="accordion container-fluid" id="accordion-table-ongoing">
+        <div class="accordion-item acc-warning">
           <!-- ACC HEADER -->
           <h2 class="accordion-header">
-            <button class="accordion-button bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#acc-table-onqueue" aria-expanded="true" aria-controls="acc-table-onqueue">
-              <div class="text-dark fw-bold">On-Queue Tickets</div>
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc-table-ongoing" aria-expanded="true" aria-controls="acc-table-ongoing">
+              <div class="text-primary fw-bold">On-Going Tickets</div>
             </button>
           </h2>
           <!-- ACC BODY -->
-          <div id="acc-table-onqueue" class="accordion-collapse collapse show" data-bs-parent="#accordion-table-onqueue">
+          <div id="acc-table-ongoing" class="accordion-collapse collapse show" data-bs-parent="#accordion-table-ongoing">
             <div class="accordion-body">
               <!-- Table Proper -->
-              <table class="table table-striped table-responsive-md table-sm table-hover">
+              <table class="table table-striped table-responsive-md table-sm table-hover" id="table-ongoing">
                 <thead class="table-dark">
                   <tr>
                     <th scope="col">Ticket No</th>
@@ -205,7 +100,121 @@
                     <th scope="col">Target Date</th>
                     <th scope="col">Category</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Action</th>
+                    <th scope="col" class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="align-middle" scope="row">TIX-20231019</th>
+                    <td class="align-middle">Transfer of PC</td>
+                    <td class="align-middle">John Doe</td>
+                    <td class="align-middle">Sales Department</td>
+                    <td class="align-middle">2023-10-19</td>
+                    <td class="align-middle">2023-10-23</td>
+                    <td class="align-middle">Hardware Support</td>
+                    <td class="align-middle"><span class="badge rounded-pill text-bg-warning">ongoing</span></td>
+                    <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" data-ticket-no="TIX-20231019">view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle" scope="row">TIX-20231020</th>
+                    <td class="align-middle">Additional Module Access</td>
+                    <td class="align-middle">Rick Shaw</td>
+                    <td class="align-middle">HR Department</td>
+                    <td class="align-middle">2023-10-20</td>
+                    <td class="align-middle">2023-10-27</td>
+                    <td class="align-middle">Access Elevation</td>
+                    <td class="align-middle"><span class="badge rounded-pill text-bg-warning">ongoing</span></td>
+                    <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle" scope="row">TIX-20231022</th>
+                    <td class="align-middle">PC Problem</td>
+                    <td class="align-middle">Erika Weltz</td>
+                    <td class="align-middle">HR Department</td>
+                    <td class="align-middle">2023-10-22</td>
+                    <td class="align-middle">2023-10-26</td>
+                    <td class="align-middle">Hardware Support</td>
+                    <td class="align-middle"><span class="badge rounded-pill text-bg-warning">ongoing</span></td>
+                    <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle" scope="row">TIX-20231004</th>
+                    <td class="align-middle">New Report</td>
+                    <td class="align-middle">Sam Son</td>
+                    <td class="align-middle">Accounting Department</td>
+                    <td class="align-middle">2023-10-04</td>
+                    <td class="align-middle">2023-10-10</td>
+                    <td class="align-middle">Software Module</td>
+                    <td class="align-middle"><span class="badge rounded-pill text-bg-warning me-1">ongoing</span><span class="badge rounded-pill text-bg-danger">overdue</span></td>
+                    <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle" scope="row">TIX-20231010</th>
+                    <td class="align-middle">Bug Detected</td>
+                    <td class="align-middle">Julie Davis</td>
+                    <td class="align-middle">Accounting Department</td>
+                    <td class="align-middle">2023-10-10</td>
+                    <td class="align-middle">2023-10-16</td>
+                    <td class="align-middle">Software Module</td>
+                    <td class="align-middle" id="status"><span class="badge rounded-pill text-bg-warning me-1">ongoing</span><span class="badge rounded-pill text-bg-danger">overdue</span></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- END-Table Proper -->
+
+            </div>
+          </div>
+        </div>
+      </section>  
+      
+      <div class="divider"></div>  
+      
+      <!-- ONQUEUE TABLE -->
+      <section class="accordion container-fluid" id="accordion-table-onqueue">
+        <div class="accordion-item acc-secondary">
+          <!-- ACC HEADER -->
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc-table-onqueue" aria-expanded="true" aria-controls="acc-table-onqueue">
+              <div class="text-dark fw-bold">On-Queue Tickets</div>
+            </button>
+          </h2>
+          <!-- ACC BODY -->
+          <div id="acc-table-onqueue" class="accordion-collapse collapse show" data-bs-parent="#accordion-table-onqueue">
+            <div class="accordion-body">
+              <!-- Table Proper -->
+              <table class="table table-striped table-responsive-md table-sm table-hover" id="table-onqueue">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Ticket No</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Requested By</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Date Requested</th>
+                    <th scope="col">Target Date</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-center">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -218,7 +227,11 @@
                     <td class="align-middle fs-6">2023-10-27</td>
                     <td class="align-middle fs-6">Hardware Assignment</td>
                     <td class="align-middle fs-6"><span class="badge rounded-pill text-bg-secondary">On Queue</span></td>
-                    <td class="align-middle fs-6"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                    <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231024</th>
@@ -229,7 +242,11 @@
                     <td class="align-middle">2023-10-14</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-secondary me-1">On Queue</span><span class="badge rounded-pill text-bg-danger">overdue</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231017</th>
@@ -240,7 +257,11 @@
                     <td class="align-middle">2023-10-08</td>
                     <td class="align-middle">Hardware Support</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-secondary me-1">On Queue</span><span class="badge rounded-pill text-bg-danger">overdue</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231015</th>
@@ -251,7 +272,11 @@
                     <td class="align-middle">2023-10-10</td>
                     <td class="align-middle">Hardware Assignment</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-secondary me-1">On Queue</span><span class="badge rounded-pill text-bg-danger">overdue</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231011</th>
@@ -262,7 +287,11 @@
                     <td class="align-middle">2023-10-26</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-secondary">On Queue</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231012</th>
@@ -273,7 +302,11 @@
                     <td class="align-middle">2023-10-26</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-secondary">On Queue</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231013</th>
@@ -284,7 +317,11 @@
                     <td class="align-middle">2023-10-26</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-secondary">On Queue</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231014</th>
@@ -295,7 +332,11 @@
                     <td class="align-middle">2023-10-24</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-secondary">On Queue</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket">Delete</button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -313,7 +354,7 @@
         <div class="accordion-item acc-success">
           <!-- ACC HEADER -->
           <h2 class="accordion-header">
-            <button class="accordion-button bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#acc-table-success" aria-expanded="true" aria-controls="acc-table-success">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc-table-success" aria-expanded="true" aria-controls="acc-table-success">
               <div class="text-light fw-bold">Completed Tickets</div>
             </button>
           </h2>
@@ -321,7 +362,7 @@
           <div id="acc-table-success" class="accordion-collapse collapse show" data-bs-parent="#accordion-table-success">
             <div class="accordion-body">
               <!-- Table Proper -->
-              <table class="table table-striped table-responsive-md table-sm table-hover">
+              <table class="table table-striped table-responsive-md table-sm table-hover" id="table-completed">
                 <thead class="table-dark">
                   <tr>
                     <th scope="col">Ticket No</th>
@@ -332,7 +373,7 @@
                     <th scope="col">Date Completed</th>
                     <th scope="col">Category</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Action</th>
+                    <th scope="col" class="text-center">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -345,7 +386,11 @@
                     <td class="align-middle">2023-10-08</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-success">completed</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231001</th>
@@ -356,7 +401,11 @@
                     <td class="align-middle">2023-10-05</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-success">completed</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                     <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                   <tr>
                     <th class="align-middle" scope="row">TIX-20231009</th>
@@ -367,7 +416,11 @@
                     <td class="align-middle">2023-10-08</td>
                     <td class="align-middle">Software Module</td>
                     <td class="align-middle"><span class="badge rounded-pill text-bg-success">completed</span></td>
-                    <td class="align-middle"><button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#viewTicketModal">view</button></td>
+                    <td class="align-middle text-center">
+                      <button class="btn btn-info view-ticket" >view</button>
+                      <button class="btn btn-warning edit-ticket" >Edit</button>
+                      <button class="btn btn-danger delete-ticket" >Delete</button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -380,7 +433,7 @@
 
       <div class="divider"></div>
 
-       <!-- ------------------- -->
+      <!-- ------------------- -->
       <!-- TRANSACTIONAL MODAL -->
       <!-- ------------------- -->
       <div class="modal fade " id="viewTicketModal" tabindex="-1" aria-labelledby="view-ticket-label" aria-hidden="true">
@@ -557,9 +610,7 @@
       </footer>
     
   <script src="index.js"></script>
-
-   
-  <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
 
