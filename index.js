@@ -73,7 +73,8 @@ function showHideTableButtons(row){
  * @param {object} row 
  * @param {string} state name of originating function call, ex. from "edit" 
  */
-function showHideModalButtons(row, state =''){
+function showHideModalButtons(row, state ='')
+{
   const columns = row.getElementsByTagName('td'); 
   const status = breakByHTMLChars(columns[6].innerHTML);
   const modalMain = document.querySelector('#viewTicketModal');
@@ -281,7 +282,7 @@ function clearFieldValues() {
 
 
 function addTicketRecord() {
-  let newTicketNo = `TIX-${new Date().getFullYear()}${new Date().getMonth()+1}${new Date().getDate()}`
+  letnewTicketNo  = `TIX-${new Date().getFullYear()}${new Date().getMonth()+1}${new Date().getDate()}`
   let category    = document.getElementById('category');
   let status      = document.getElementById('field-status');
   let title       = document.getElementById('request-title');
