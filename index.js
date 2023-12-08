@@ -481,6 +481,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // MODAL BUTTONS
   // COMPLETE TICKET BUTTON
+  
   addGlobalEventListener("click",'#modal-btn-complete', e => {
     const tblRow   = document.querySelector("#table-completed");
     const tblBody  = tblRow.querySelector('tbody');
@@ -517,7 +518,8 @@ document.addEventListener('DOMContentLoaded', function() {
     generateToast("text-bg-success",`Ticket <strong>${ticketNo[0].textContent}</strong> tag as COMPLETE`);
   });
 
-  // PROCESS TICKET BUTTON
+// PROCESS BUTTONN
+
   addGlobalEventListener("click",'#modal-btn-process', e => {
     const tblRow   = document.querySelector("#table-ongoing");
     const tblBody  = tblRow.querySelector('tbody');
@@ -572,11 +574,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let department  = document.getElementById('department');
     
     columns[5].textContent = category.value;
-    columns[0].textContent = title.value       
-    columns[3].textContent = dateCreated.value 
-    columns[4].textContent = targetDate.value  
-    columns[1].textContent = requestedBy.value 
-    columns[2].textContent = department.value  
+    columns[0].textContent = title.value;       
+    columns[3].textContent = dateCreated.value;
+    columns[4].textContent = targetDate.value;  
+    columns[1].textContent = requestedBy.value; 
+    columns[2].textContent = department.value;  
     
     generateToast("text-bg-success",`Ticket ${ticketNo[0].textContent} updated`); 
   });
