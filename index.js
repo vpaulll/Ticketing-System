@@ -73,8 +73,7 @@ function showHideTableButtons(row){
  * @param {object} row 
  * @param {string} state name of originating function call, ex. from "edit" 
  */
-function showHideModalButtons(row, state ='')
-{
+function showHideModalButtons(row, state =''){
   const columns = row.getElementsByTagName('td'); 
   const status = breakByHTMLChars(columns[6].innerHTML);
   const modalMain = document.querySelector('#viewTicketModal');
@@ -282,7 +281,7 @@ function clearFieldValues() {
 
 
 function addTicketRecord() {
-  letnewTicketNo  = `TIX-${new Date().getFullYear()}${new Date().getMonth()+1}${new Date().getDate()}`
+  let newTicketNo = `TIX-${new Date().getFullYear()}${new Date().getMonth()+1}${new Date().getDate()}`
   let category    = document.getElementById('category');
   let status      = document.getElementById('field-status');
   let title       = document.getElementById('request-title');
@@ -354,8 +353,6 @@ document.addEventListener('DOMContentLoaded', function() {
       
     });
 
-
-    
   });
 
   // ALL VIEW BUTTONS
@@ -433,10 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form.classList.add('was-validated');
       })
     });
-
-
   });
-
 
   // ALL DELETE BUTTONS
   deleteButton.forEach(function(button){
@@ -477,11 +471,8 @@ document.addEventListener('DOMContentLoaded', function() {
      });
   });
 
-  
-
   // MODAL BUTTONS
   // COMPLETE TICKET BUTTON
-  
   addGlobalEventListener("click",'#modal-btn-complete', e => {
     const tblRow   = document.querySelector("#table-completed");
     const tblBody  = tblRow.querySelector('tbody');
@@ -518,8 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
     generateToast("text-bg-success",`Ticket <strong>${ticketNo[0].textContent}</strong> tag as COMPLETE`);
   });
 
-// PROCESS BUTTONN
-
+  // PROCESS TICKET BUTTON
   addGlobalEventListener("click",'#modal-btn-process', e => {
     const tblRow   = document.querySelector("#table-ongoing");
     const tblBody  = tblRow.querySelector('tbody');
@@ -574,14 +564,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let department  = document.getElementById('department');
     
     columns[5].textContent = category.value;
-    columns[0].textContent = title.value;       
-    columns[3].textContent = dateCreated.value;
-    columns[4].textContent = targetDate.value;  
-    columns[1].textContent = requestedBy.value; 
-    columns[2].textContent = department.value;  
+    columns[0].textContent = title.value       
+    columns[3].textContent = dateCreated.value 
+    columns[4].textContent = targetDate.value  
+    columns[1].textContent = requestedBy.value 
+    columns[2].textContent = department.value  
     
     generateToast("text-bg-success",`Ticket ${ticketNo[0].textContent} updated`); 
   });
 
  
 });
+
