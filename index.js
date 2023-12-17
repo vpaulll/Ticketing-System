@@ -34,9 +34,8 @@ function changeModalHeaderColor(status){
       break;                    
   } 
 }
-
 /** 
- * breakByHTMLChars
+
  * -separate string of text by html tags and convert to array
  * @param {string} statusHtml the column of status in selected row
  * 
@@ -48,7 +47,6 @@ function breakByHTMLChars(statusHtml = ""){
 
   return resultArray.filter(item => item.trim() !== '');
 }
-
 /** 
  * showHideTableButtons
  * -show or hide the table buttons depending on row status
@@ -139,7 +137,6 @@ function showHideModalButtons(row, state =''){
 
   
 }
-
 /** 
  * removeRowHightlight
  * -removes row highlight
@@ -218,15 +215,13 @@ function assignRowFieldValues(row) {
     category.value    = columns[5].textContent;
     status.value      = textContentArray.join("/");
     title.value       = columns[0].textContent;
-    description.value = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi esse provident mollitia aut illum perspiciatis hic sint similique consequuntur, odio aspernatur impedit excepturi praesentium architecto, voluptates dolore voluptas dolores dicta!';
+    description.value = 'The library encourages responsible borrowing, allowing two items per patron for a five period with three renewals. Overdue returns incur a P20 per day, and lost/damaged items require replacement cost plus a processing fee. Students must maintain respectful conduct, adhere to quiet zones, and refrain from food/drink near materials. ';
     dateCreated.value = columns[3].textContent;
     targetDate.value  = columns[4].textContent;
     requestedBy.value = columns[1].textContent;
-    assignedTo.value  = 'IT Department';
+    assignedTo.value  = 'Library Department';
     department.value  = columns[2].textContent;
 }
-
-
 /**
  * clearFieldValues
  * - empty text field value for add modal
@@ -256,7 +251,7 @@ function clearFieldValues() {
   category.value    = '';
   status.value      = 'On Queue';
   title.value       = '';
-  description.value = '';
+  description.value = 'The library encourages responsible borrowing, allowing two items per patron for a five period with three renewals. Overdue returns incur a P20 per day, and lost/damaged items require replacement cost plus a processing fee. Students must maintain respectful conduct, adhere to quiet zones, and refrain from food/drink near materials. ';
   dateCreated.value = new Date().toISOString().split('T')[0];
   targetDate.value  = newDateTarget;
   requestedBy.value = '';
@@ -264,6 +259,8 @@ function clearFieldValues() {
   department.value  = '';
 
   // disable some dates
+
+  description.setAttribute("disabled","");
   status.setAttribute("disabled","");
   dateCreated.setAttribute("disabled","");
   assignedTo.setAttribute("disabled","");
@@ -281,7 +278,7 @@ function clearFieldValues() {
 
 
 function addTicketRecord() {
-  let newTicketNo = `TIX-${new Date().getFullYear()}${new Date().getMonth()+1}${new Date().getDate()}`
+  let newTicketNo = `BK-${new Date().getFullYear()}${new Date().getMonth()+1}${new Date().getDate()}`
   let category    = document.getElementById('category');
   let status      = document.getElementById('field-status');
   let title       = document.getElementById('request-title');
@@ -448,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function() {
       confirmDelBtn.addEventListener("click", function(){
         myModal.hide();
         row.remove();        
-        generateToast("text-bg-danger",`Ticket <strong>${ticketNo[0].textContent}</strong> DELETED`);
+        generateToast("text-bg-danger",`Book <strong>${ticketNo[0].textContent}</strong> DELETED`);
       });
       
     });
@@ -506,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </td>`;
     
     activeRow.remove();
-    generateToast("text-bg-success",`Ticket <strong>${ticketNo[0].textContent}</strong> tag as COMPLETE`);
+    generateToast("text-bg-success",`Book <strong>${ticketNo[0].textContent}</strong> tag as COMPLETE`);
   });
 
   // PROCESS TICKET BUTTON
@@ -543,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </td>`;
     
     activeRow.remove();
-    generateToast("text-bg-warning",`Ticket ${ticketNo[0].textContent} tag as <strong>ONGOING</strong>`);
+    generateToast("text-bg-warning",`Book ${ticketNo[0].textContent} tag as <strong>ONGOING</strong>`);
   });
 
   // SAVE TICKET BUTTON
@@ -570,7 +567,7 @@ document.addEventListener('DOMContentLoaded', function() {
     columns[1].textContent = requestedBy.value 
     columns[2].textContent = department.value  
     
-    generateToast("text-bg-success",`Ticket ${ticketNo[0].textContent} updated`); 
+    generateToast("text-bg-success",`Book ${ticketNo[0].textContent} updated`); 
   });
 
  
